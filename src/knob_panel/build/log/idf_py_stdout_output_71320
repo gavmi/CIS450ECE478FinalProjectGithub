@@ -1,0 +1,45 @@
+[1/1551] Generating project_elf_src_esp32c3.c
+[2/1551] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\ECE478\esp-dev-kits-master\esp-dev-kits-master\esp32-c3-lcdkit\examples\knob_panel\build\esp-idf\main && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/esps/esp-idf/components/spiffs/spiffsgen.py 0x64000 C:/ECE478/esp-dev-kits-master/esp-dev-kits-master/esp32-c3-lcdkit/examples/knob_panel/spiffs C:/ECE478/esp-dev-kits-master/esp-dev-kits-master/esp32-c3-lcdkit/examples/knob_panel/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+FAILED: esp-idf/main/CMakeFiles/spiffs_storage_bin C:/ECE478/esp-dev-kits-master/esp-dev-kits-master/esp32-c3-lcdkit/examples/knob_panel/build/esp-idf/main/CMakeFiles/spiffs_storage_bin 
+C:\WINDOWS\system32\cmd.exe /C "cd /D C:\ECE478\esp-dev-kits-master\esp-dev-kits-master\esp32-c3-lcdkit\examples\knob_panel\build\esp-idf\main && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/esps/esp-idf/components/spiffs/spiffsgen.py 0x64000 C:/ECE478/esp-dev-kits-master/esp-dev-kits-master/esp32-c3-lcdkit/examples/knob_panel/spiffs C:/ECE478/esp-dev-kits-master/esp-dev-kits-master/esp32-c3-lcdkit/examples/knob_panel/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+Traceback (most recent call last):
+  File "C:\esps\esp-idf\components\spiffs\spiffsgen.py", line 431, in create_file
+    block.update_obj(contents_chunk)
+  File "C:\esps\esp-idf\components\spiffs\spiffsgen.py", line 346, in update_obj
+    raise SpiffsFullError()
+SpiffsFullError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\esps\esp-idf\components\spiffs\spiffsgen.py", line 435, in create_file
+    raise SpiffsFullError
+SpiffsFullError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\esps\esp-idf\components\spiffs\spiffsgen.py", line 590, in <module>
+    main()
+  File "C:\esps\esp-idf\components\spiffs\spiffsgen.py", line 582, in main
+    spiffs.create_file('/' + os.path.relpath(full_path, args.base_dir).replace('\\', '/'), full_path)
+  File "C:\esps\esp-idf\components\spiffs\spiffsgen.py", line 446, in create_file
+    block = self._create_block()
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\esps\esp-idf\components\spiffs\spiffsgen.py", line 395, in _create_block
+    raise SpiffsFullError('the image size has been exceeded')
+SpiffsFullError: the image size has been exceeded
+[3/1551] Generating C:/ECE478/esp-dev-kits-master/esp-dev-kits-master/esp32-c3-lcdkit/examples/knob_panel/build/esp-idf/esp_system/ld/memory.ld linker script...
+[4/1551] Generating C:/ECE478/esp-dev-kits-master/esp-dev-kits-master/esp32-c3-lcdkit/examples/knob_panel/build/esp-idf/esp_system/ld/sections.ld.in linker script...
+[5/1551] Generating ../../partition_table/partition-table.bin
+Partition table binary generated. Contents:
+*******************************************************************************
+# ESP-IDF Partition Table
+# Name, Type, SubType, Offset, Size, Flags
+nvs,data,nvs,0x9000,24K,
+phy_init,data,phy,0xf000,4K,
+fctry,data,nvs,0x10000,24K,
+factory,app,factory,0x20000,3400K,
+storage,data,spiffs,0x372000,400K,
+*******************************************************************************
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,9 @@
+We modified the code from this directory in GitHub: esp-dev-kits/examples/esp32-c3-lcdkit/examples/knob_panel
+
+https://github.com/espressif/esp-dev-kits
+
+
+Modified Files:
+app_audio.c
+app_audio.h
+ui_light_2color.c
